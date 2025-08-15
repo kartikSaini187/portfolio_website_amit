@@ -12,7 +12,7 @@ const GraphicDesignerPortfolio = () => {
 
   // Company information
   const companyInfo = {
-    name: "TechFlow",
+    name: "TechnoPixcel ",
     tagline: "Innovating Tomorrow's Technology Today",
     description: "We deliver cutting-edge solutions that transform businesses and drive digital excellence.",
     address: {
