@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Mail, Phone, MapPin, Menu, X, Home, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { ChevronDown, Mail, Phone, Menu, X, Home, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const GraphicDesignerPortfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -400,8 +400,6 @@ const GraphicDesignerPortfolio = () => {
               style={{
                 left: `${Math.random() * 100}%`,
                 bottom: '-10px',
-                animationDelay: `${Math.random() * 20}s`,
-                animationDuration: `${Math.random() * 20 + 20}s`,
                 animation: `floatUp ${Math.random() * 20 + 20}s linear infinite`,
                 animationDelay: `${Math.random() * 20}s`
               }}
