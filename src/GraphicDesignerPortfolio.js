@@ -23,10 +23,10 @@ const GraphicDesignerPortfolio = () => {
     phones: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
     emails: ["info@techflow.com", "support@techflow.com"],
     socials: {
-      facebook: "#",
-      twitter: "#",
-      linkedin: "#",
-      instagram: "#"
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      linkedin: "https://linkedin.com",
+      instagram: "https://instagram.com"
     }
   };
 
@@ -545,10 +545,13 @@ const GraphicDesignerPortfolio = () => {
               <ul className="space-y-2">
                 {['Home', 'Services', 'About', 'Careers', 'Blog'].map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center group">
+                    <button 
+                      onClick={() => link === 'Home' || link === 'Services' || link === 'About' ? scrollToSection(link.toLowerCase()) : null}
+                      className="text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center group cursor-pointer bg-transparent border-none text-left"
+                    >
                       <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">▸</span>
                       {link}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -560,10 +563,10 @@ const GraphicDesignerPortfolio = () => {
               <ul className="space-y-2">
                 {services.slice(0, 5).map((service) => (
                   <li key={service.id}>
-                    <a href="#" className="text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center group">
+                    <button className="text-gray-400 hover:text-indigo-400 transition-colors duration-200 flex items-center group cursor-pointer bg-transparent border-none text-left">
                       <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">▸</span>
                       {service.title}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -648,8 +651,8 @@ const GraphicDesignerPortfolio = () => {
             </div>
             <p className="text-gray-400">
               © 2024 {companyInfo.name}. All rights reserved. | 
-              <a href="#" className="text-indigo-400 hover:text-indigo-300 mx-2 transition-colors">Privacy Policy</a> | 
-              <a href="#" className="text-indigo-400 hover:text-indigo-300 ml-2 transition-colors">Terms of Service</a>
+              <button className="text-indigo-400 hover:text-indigo-300 mx-2 transition-colors cursor-pointer bg-transparent border-none">Privacy Policy</button> | 
+              <button className="text-indigo-400 hover:text-indigo-300 ml-2 transition-colors cursor-pointer bg-transparent border-none">Terms of Service</button>
             </p>
           </div>
         </div>
@@ -657,6 +660,5 @@ const GraphicDesignerPortfolio = () => {
     </div>
   );
 };
-
 
 export default GraphicDesignerPortfolio;
